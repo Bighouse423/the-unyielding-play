@@ -1,0 +1,239 @@
+{
+  "_comment": "Sound overrides: map an SFX name to a file in this folder (see README.md). Music: name each song ONCE under \"tracks\", then point slots at it under \"music\". Slots fall back most-specific -> general -> \"default\". Sound effects (M7d ElevenLabs pack in audio/sfx/) are listed under \"sfx\".",
+  "tracks": {
+    "bighouse": {
+      "file": "hub_bighouse.mp3",
+      "alt": [
+        "hub_bighouse.m4a"
+      ],
+      "vol": 0.55,
+      "xf": 2.0
+    }
+  },
+  "music": {
+    "default": "bighouse",
+    "title": "bighouse",
+    "hub": "bighouse",
+    "explore": "bighouse",
+    "boss": "bighouse",
+    "abyss": "bighouse",
+    "victory": "bighouse",
+    "_example_overrides": "add e.g. \"boss_lich\": \"lichsong\" or \"stage_abyss\": \"voidsong\" once those tracks exist in \"tracks\""
+  },
+  "sfx": {
+    "_comment": "M7d ElevenLabs SFX pack. Each name -> audio/sfx/<name>.ogg|.mp3. Value = volume, or {vol, file, fixed, duck, max}. Generic names (swing, hit, step...) replace the synth sound; the rest are new events. Delete a line to get the synth sound back. fixed = no pitch/volume variation, duck = music level while it plays, max = simultaneous copies.",
+    "_dir": "sfx/",
+    "_gain": 1.0,
+    "swing": 0.7,
+    "swingH": 0.8,
+    "swing_axe": 0.85,
+    "swing_great": 0.9,
+    "swing_void": 0.85,
+    "hit": 0.85,
+    "heavy": 0.9,
+    "gib": 0.75,
+    "whip": 0.8,
+    "latch": 0.75,
+    "block": 0.7,
+    "parry": 0.8,
+    "finisher": 0.95,
+    "xbow_fire": 0.9,
+    "xbow_crank": 0.7,
+    "bolt_impact": 0.8,
+    "pistol": 0.9,
+    "dodge": 0.65,
+    "step": 0.4,
+    "jump": 0.5,
+    "land": 0.6,
+    "hurt": 0.85,
+    "player_death": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.4
+    },
+    "heartbeat": {
+      "vol": 0.8,
+      "max": 1
+    },
+    "growl_undead": {
+      "vol": 0.6,
+      "max": 2
+    },
+    "attack_undead": {
+      "vol": 0.6,
+      "max": 2
+    },
+    "death_undead": {
+      "vol": 0.7,
+      "max": 3
+    },
+    "growl_beast": {
+      "vol": 0.6,
+      "max": 2
+    },
+    "attack_beast": {
+      "vol": 0.6,
+      "max": 2
+    },
+    "death_beast": {
+      "vol": 0.7,
+      "max": 3
+    },
+    "growl_winged": {
+      "vol": 0.6,
+      "max": 2
+    },
+    "attack_winged": {
+      "vol": 0.6,
+      "max": 2
+    },
+    "death_winged": {
+      "vol": 0.7,
+      "max": 3
+    },
+    "growl_spirit": {
+      "vol": 0.6,
+      "max": 2
+    },
+    "attack_spirit": {
+      "vol": 0.6,
+      "max": 2
+    },
+    "death_spirit": {
+      "vol": 0.7,
+      "max": 3
+    },
+    "growl_armored": {
+      "vol": 0.6,
+      "max": 2
+    },
+    "attack_armored": {
+      "vol": 0.6,
+      "max": 2
+    },
+    "death_armored": {
+      "vol": 0.7,
+      "max": 3
+    },
+    "intro_vknight": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.35,
+      "max": 1
+    },
+    "intro_spider": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.35,
+      "max": 1
+    },
+    "intro_colossus": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.35,
+      "max": 1
+    },
+    "intro_alphawolf": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.35,
+      "max": 1
+    },
+    "intro_matriarch": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.35,
+      "max": 1
+    },
+    "intro_minotaur": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.35,
+      "max": 1
+    },
+    "intro_witch": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.35,
+      "max": 1
+    },
+    "intro_hellhound": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.35,
+      "max": 1
+    },
+    "intro_uknight": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.35,
+      "max": 1
+    },
+    "intro_lich": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.35,
+      "max": 1
+    },
+    "lich_phase2": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.4,
+      "max": 1
+    },
+    "lich_phase3": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.4,
+      "max": 1
+    },
+    "boss_death": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.35,
+      "max": 1
+    },
+    "secret_wall": {
+      "vol": 0.9,
+      "max": 1
+    },
+    "secret": {
+      "vol": 0.85,
+      "fixed": true,
+      "duck": 0.5,
+      "max": 1
+    },
+    "door": {
+      "vol": 0.85,
+      "max": 1
+    },
+    "fire": 0.6,
+    "pickup_health": 0.75,
+    "pickup_shards": 0.7,
+    "pickup_relic": 0.85,
+    "pickup_weapon": 0.85,
+    "altar_buy": 0.85,
+    "ui_click": {
+      "vol": 0.5,
+      "max": 2
+    },
+    "level_clear": {
+      "vol": 0.95,
+      "fixed": true,
+      "duck": 0.4,
+      "max": 1
+    },
+    "abyss_descend": {
+      "vol": 1.0,
+      "fixed": true,
+      "duck": 0.4,
+      "max": 1
+    },
+    "abyss_ambience": {
+      "vol": 0.32,
+      "fixed": true,
+      "loop": true,
+      "max": 1
+    }
+  }
+}
