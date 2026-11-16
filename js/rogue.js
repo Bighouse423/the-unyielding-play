@@ -79,7 +79,7 @@ const UPG = [
   { id: 'wraithcloak', kind: 'RELIC', r: 'rare', name: 'WRAITH CLOAK', icon: 'ic_wraithcloak', desc: 'Rolls: longer i-frames, 30% shorter cooldown. Perfect dodges heal 4.', ok: () => !P.mods.wraith, take() { P.mods.wraith = 1; } },
 ];
 const synOn = id => { const u = UPG.find(q => q.id === id); return !!(u && u.syn && P.mods && u.syn.has() && RUN.picks.includes(id)); };
-const RUN = { on: false, seed: 1, shardsRun: 0, stage: 1, picks: [], kills: 0, elites: 0, time: 0, best: +(localStorage.getItem('tu_play_m7d_best') || 0), cfg: stageCfg(1), choices: null, sel: 0, pickT: 0, resT: 0, cause: '' };
+const RUN = { on: false, seed: 1, shardsRun: 0, stage: 1, picks: [], kills: 0, elites: 0, time: 0, best: +(localStorage.getItem('tu_share_m7d_fresh_k4c9_best') || 0), cfg: stageCfg(1), choices: null, sel: 0, pickT: 0, resT: 0, cause: '' };
 window.RUN = RUN;
 function newRunPlayer() {
   P.wpn = { sword: 'base', whip: 'base', ranged: 'pistol' };
@@ -526,7 +526,7 @@ function drawElitePlates(ctx, cam) {
 function startResults() {
   RUN.kills += G.kills; RUN.time += G.time; G.kills = 0; G.time = 0;
   if (typeof bankRun === 'function') bankRun();
-  else if (RUN.stage > RUN.best) { RUN.best = RUN.stage; RUN.newBest = true; try { localStorage.setItem('tu_play_m7d_best', RUN.best); } catch (e) {} } else RUN.newBest = false;
+  else if (RUN.stage > RUN.best) { RUN.best = RUN.stage; RUN.newBest = true; try { localStorage.setItem('tu_share_m7d_fresh_k4c9_best', RUN.best); } catch (e) {} } else RUN.newBest = false;
   G.state = 'results'; RUN.resT = 0;
 }
 function resultsInput(rdt) {

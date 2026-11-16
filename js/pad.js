@@ -2,8 +2,8 @@
 // Standard mapping: 0 Cross, 1 Circle, 2 Square, 3 Triangle, 4 L1, 5 R1, 6 L2, 7 R2, 8 Create, 9 Options, 10 L3, 11 R3, 12-15 D-pad U/D/L/R
 const PAD = { idx: -1, connected: false, id: '', prev: [], held: new Set(), lx: 0, ly: 0, rx: 0, ry: 0, l2: false, r2: false, run: false, lookHeld: 0, lastRumble: 0, sens: 1 };
 // v2.7 controller settings (pause menu -> CONTROLLER), saved between sessions
-const PADCFG = Object.assign({ sx: 1, sy: 1, inv: false, assist: 1, turn: 'R3', accel: true, vib: 1 }, (() => { try { return JSON.parse(localStorage.getItem('tu_play_m7d_pad') || '{}'); } catch (e) { return {}; } })());
-function savePadCfg() { try { localStorage.setItem('tu_play_m7d_pad', JSON.stringify(PADCFG)); } catch (e) { } }
+const PADCFG = Object.assign({ sx: 1, sy: 1, inv: false, assist: 1, turn: 'R3', accel: true, vib: 1 }, (() => { try { return JSON.parse(localStorage.getItem('tu_share_m7d_fresh_k4c9_pad') || '{}'); } catch (e) { return {}; } })());
+function savePadCfg() { try { localStorage.setItem('tu_share_m7d_fresh_k4c9_pad', JSON.stringify(PADCFG)); } catch (e) { } }
 function padDZ(v, d) { const a = Math.abs(v); if (a < d) return 0; return Math.sign(v) * Math.min(1, (a - d) / (1 - d)); }
 addEventListener('gamepaddisconnected', e => {
   if (!e.gamepad || e.gamepad.index !== PAD.idx) return;

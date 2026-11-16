@@ -2,17 +2,17 @@
 // ===== M3: THE CHAPEL - the hub between runs =====
 // A small walkable chapel. Spend Reliquary Shards at the altar on unlocks (weapons and relics join the drop pool),
 // starting loadouts and small capped blessings. Walk through the iron door to descend. Progress lives in localStorage.
-const SAVE_KEY = 'tu_play_m7d_save';
+const SAVE_KEY = 'tu_share_m7d_fresh_k4c9_save';
 function defaultSave() { return { v: 1, shards: 0, unl: {}, upg: { vit: 0, soul: 0, might: 0, fortune: 0 }, load: { sword: 'base', whip: 'base', ranged: 'none' }, best: { stage: 0, kills: 0, time: 0 }, stats: { runs: 0, kills: 0, elites: 0, bosses: 0, secrets: 0, shards: 0 } }; }
 function loadSave() {
   let s = null; try { s = JSON.parse(localStorage.getItem(SAVE_KEY) || 'null'); } catch (e) { s = null; }
   const d = defaultSave(); if (!s || typeof s !== 'object') s = {};
   const out = Object.assign(d, s); for (const k of ['unl', 'upg', 'load', 'best', 'stats']) out[k] = Object.assign(defaultSave()[k], s[k] || {});
-  const old = +(localStorage.getItem('tu_play_m7d_best') || 0); if (old > out.best.stage) out.best.stage = old;   // migrate the M1/M2 best stage
+  // Public friends copy: never import tu_save / tu_best / tu_play_* or any older key.
   return out;
 }
 const SAVE = loadSave(); window.SAVE = SAVE;
-function writeSave() { try { localStorage.setItem(SAVE_KEY, JSON.stringify(SAVE)); localStorage.setItem('tu_play_m7d_best', SAVE.best.stage); } catch (e) {} }
+function writeSave() { try { localStorage.setItem(SAVE_KEY, JSON.stringify(SAVE)); localStorage.setItem('tu_share_m7d_fresh_k4c9_best', SAVE.best.stage); } catch (e) {} }
 RUN.best = Math.max(RUN.best || 0, SAVE.best.stage);
 
 // ---- the altar's offerings ----
