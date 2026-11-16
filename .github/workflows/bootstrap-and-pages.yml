@@ -78,6 +78,8 @@ jobs:
           echo "----- PUT -----"; cat /tmp/pages-put.json; echo
 
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Stage site artifact
         run: |
